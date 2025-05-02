@@ -15,6 +15,7 @@ const OptionsCheckbox: React.FC<OptionsCheckboxProps> = ({
     <div className="flex items-center gap-4">
       <div className="relative flex items-center justify-center">
         <input
+          id={`checkbox_${title.toLowerCase().replace(/\s+/g, '_')}`}
           type="checkbox"
           checked={checked}
           onChange={(e) => onChange(e.target.checked)}
@@ -38,7 +39,7 @@ const OptionsCheckbox: React.FC<OptionsCheckboxProps> = ({
           />
         )}
       </div>
-      <label className="block text-preset-4 md:text-preset-3 text-grey-200 text-nowrap">{title}</label>
+      <label htmlFor={`checkbox_${title.toLowerCase().replace(/\s+/g, '_')}`} className="block text-preset-4 md:text-preset-3 text-grey-200 text-nowrap">{title}</label>
     </div>
   );
 };

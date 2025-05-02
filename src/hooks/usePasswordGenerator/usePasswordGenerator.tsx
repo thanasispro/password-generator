@@ -8,13 +8,13 @@ interface PasswordOptions {
   symbols: boolean;
 }
 
-export const usePasswordGenerator = (initialLength: number = 10) => {
+export const usePasswordGenerator = (initialLength: number = 0) => {
   const [password, setPassword] = useState<string | undefined>(undefined);
   const [passwordLength, setPasswordLength] = useState<number>(initialLength);
   const [options, setOptions] = useState<PasswordOptions>({
-    uppercase: true,
-    lowercase: true,
-    numbers: true,
+    uppercase: false,
+    lowercase: false,
+    numbers: false,
     symbols: false,
   });
 

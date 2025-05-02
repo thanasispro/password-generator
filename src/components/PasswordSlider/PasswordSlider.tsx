@@ -87,7 +87,7 @@ const PasswordSlider: React.FC<PasswordSliderProps> = ({
         >
           {label}
         </label>
-        <p className="text-preset-2 text-green-200 font-bold mr-[14px]">{value}</p>
+        <p className="text-preset-2 md:text-preset-1 text-green-200 font-bold mr-[14px]">{value}</p>
       </div>
         <input
           ref={inputRef}
