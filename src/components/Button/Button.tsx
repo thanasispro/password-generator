@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   icon
 }) => {
   // Updated styles to prevent size changes on hover
-  const baseClasses = "py-[16px] bg-green-200 text-gray-800 uppercase text-preset-4 border border-transparent";
+  const baseClasses = "py-[16px] bg-green-200 text-grey-800 uppercase text-preset-4 border border-transparent";
   const hoverStyles = "hover:text-green-200 hover:bg-transparent hover:border-green-200 hover:cursor-pointer";
   const widthClass = fullWidth ? 'w-full' : '';
   const mdClasses = "md:py-[20.5px] md:text-preset-3";

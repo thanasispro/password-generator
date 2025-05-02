@@ -83,7 +83,7 @@ const PasswordSlider: React.FC<PasswordSliderProps> = ({
       <div className="flex justify-between items-center">
         <label
           htmlFor="passwordLength"
-          className="text-preset-4 text-gray-200"
+          className="text-preset-4 md:text-preset-3 text-grey-200"
         >
           {label}
         </label>

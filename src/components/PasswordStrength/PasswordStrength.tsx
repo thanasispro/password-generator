@@ -29,15 +29,15 @@ const PasswordStrength: React.FC<PasswordStrengthProps> = ({ options, label, pas
     t('passwordStrength.strong'),
     t('passwordStrength.veryStrong')
   ];
-  const strengthColors = ['bg-gray-200', 'bg-red-500', 'bg-orange-500', 'bg-yellow-500', 'bg-green-500'];
+  const strengthColors = ['bg-grey-200', 'bg-red-500', 'bg-orange-500', 'bg-yellow-500', 'bg-green-500'];
   
   return (
       <div className="flex items-center justify-between px-4 py-[14px] md:px-[31.5px] md:py-[22px] bg-grey-850">
-        <label className="text-preset-4 uppercase text-gray-600">
+        <label className="text-preset-4 uppercase text-grey-600">
           {t(label)}
         </label>
         <div className="flex items-center gap-4">
-          <div className="text-preset-3 uppercase text-gray-200" data-testid="strength-label">
+          <div className="text-preset-3 uppercase text-grey-200" data-testid="strength-label">
             {strengthLabels[strengthLevel]}
           </div>
           <div className="flex space-x-2">
@@ -45,7 +45,7 @@ const PasswordStrength: React.FC<PasswordStrengthProps> = ({ options, label, pas
               <div 
                 key={index}
                 className={`h-[28px] w-[10px] ${
-                  index <= strengthLevel ? strengthColors[strengthLevel] : 'bg-gray-200'
+                  index <= strengthLevel ? strengthColors[strengthLevel] : 'bg-grey-200'
                 }`}
               ></div>
             ))}

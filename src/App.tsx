@@ -23,7 +23,7 @@ function App() {
   return (
     <main
       className={`
-      flex items-center justify-center min-h-screen
+      flex items-start justify-center min-h-screen
       bg-gradient-to-r from-gradient-start to-gradient-end
       `}
     >
@@ -31,8 +31,8 @@ function App() {
         <LanguageToggle />
       </header>
 
-      <article className="flex flex-col gap-4 md:gap-6 w-[343px] md:w-[540px]">
-        <h1 className="text-preset-4 md:mb-2 text-gray-600 text-center md:text-preset-2">
+      <article className="flex flex-col gap-4 md:gap-6 w-[343px] md:w-[540px] mt-[65px] md:mt-[130px]">
+        <h1 className="text-preset-4 md:mb-2 text-grey-600 text-center md:text-preset-2">
           {t("password_generator")}
         </h1>
         
@@ -40,7 +40,7 @@ function App() {
         
         <section
           className={`
-          w-full p-4 md:px-8 md:pt-6 md:pb-[41px] bg-gray-800 flex flex-col gap-8
+          w-full p-4 md:px-8 md:pt-6 md:pb-[41px] bg-grey-800 flex flex-col gap-8
           `}
           aria-label={t("password_configuration")}
         >

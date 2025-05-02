@@ -59,9 +59,9 @@ describe('PasswordStrength Component', () => {
     const bars = container.querySelectorAll('div.flex.space-x-2 > div');
     expect(bars.length).toBe(4);
     expect(bars[0].className).includes('bg-red-500');
-    expect(bars[1].className).includes('bg-gray-200');
-    expect(bars[2].className).includes('bg-gray-200');
-    expect(bars[3].className).includes('bg-gray-200');
+    expect(bars[1].className).includes('bg-grey-200');
+    expect(bars[2].className).includes('bg-grey-200');
+    expect(bars[3].className).includes('bg-grey-200');
   });
 
   test('shows correct strength indicators for medium password', () => {
@@ -80,8 +80,8 @@ describe('PasswordStrength Component', () => {
     const bars = container.querySelectorAll('div.flex.space-x-2 > div');
     expect(bars[0].className).includes('bg-orange-500');
     expect(bars[1].className).includes('bg-orange-500');
-    expect(bars[2].className).includes('bg-gray-200');
-    expect(bars[3].className).includes('bg-gray-200');
+    expect(bars[2].className).includes('bg-grey-200');
+    expect(bars[3].className).includes('bg-grey-200');
   });
 
   test('shows correct strength indicators for strong password', () => {
@@ -101,7 +101,7 @@ describe('PasswordStrength Component', () => {
     expect(bars[0].className).includes('bg-yellow-500');
     expect(bars[1].className).includes('bg-yellow-500');
     expect(bars[2].className).includes('bg-yellow-500');
-    expect(bars[3].className).includes('bg-gray-200');
+    expect(bars[3].className).includes('bg-grey-200');
   });
 
   test('shows correct strength indicators for very strong password', () => {
@@ -151,9 +151,9 @@ describe('PasswordStrength Component', () => {
     expect(screen.getByTestId('strength-label').textContent).toBe('');
     
     const bars = container.querySelectorAll('div.flex.space-x-2 > div');
-    expect(bars[0].className).includes('bg-gray-200');
-    expect(bars[1].className).includes('bg-gray-200');
-    expect(bars[2].className).includes('bg-gray-200');
-    expect(bars[3].className).includes('bg-gray-200');
+    expect(bars[0].className).includes('bg-grey-200');
+    expect(bars[1].className).includes('bg-grey-200');
+    expect(bars[2].className).includes('bg-grey-200');
+    expect(bars[3].className).includes('bg-grey-200');
   });
 });

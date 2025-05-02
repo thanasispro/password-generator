@@ -21,7 +21,7 @@ const OptionsCheckbox: React.FC<OptionsCheckboxProps> = ({
           className="
             appearance-none
             h-[20px] w-[20px]
-            border-2 border-gray-200
+            border-2 border-grey-200
             bg-transparent
             checked:bg-green-200 
             checked:border-green-200
@@ -38,7 +38,7 @@ const OptionsCheckbox: React.FC<OptionsCheckboxProps> = ({
           />
         )}
       </div>
-      <label className="block text-preset-4 text-gray-200 text-nowrap">{title}</label>
+      <label className="block text-preset-4 md:text-preset-3 text-grey-200 text-nowrap">{title}</label>
     </div>
   );
 };
