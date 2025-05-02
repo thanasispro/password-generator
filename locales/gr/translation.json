@@ -1,0 +1,19 @@
+{
+  "password_generator": "Δημιουργία Κωδικού",
+  "character_length": "Μήκος Χαρακτήρων",
+  "include_uppercase_letters": "Χρήση Κεφαλαίων",
+  "include_lowercase_letters": "Χρήση Μικρών",
+  "include_numbers": "Χρήση Αριθμών",
+  "include_symbols": "Χρήση Συμβόλων",
+  "strength": "Ισχύς",
+  "generate": "Δημιουργία",
+  "copy": "Aντιγραφή",
+  "copied": "Αντιγράφηκε",
+  "copy_to_clipboard": "Αντιγραφή στο Πρόχειρο",
+  "passwordStrength": {
+    "weak": "Αδύναμος",
+    "medium": "Μέτριος",
+    "strong": "Δυνατός",
+    "veryStrong": "Ισχυρός"
+  }
+}
