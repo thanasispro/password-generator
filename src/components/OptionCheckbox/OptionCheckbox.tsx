@@ -32,7 +32,7 @@ const OptionsCheckbox: React.FC<OptionsCheckboxProps> = ({
         />
         {checked && (
           <img 
-            src={"/images/icon-check.svg"} 
+            src={"./images/icon-check.svg"} 
             alt="Checked" 
             className="absolute pointer-events-none h-3 w-3"
           />
