@@ -1,0 +1,19 @@
+{
+  "password_generator": "Password Generator",
+  "character_length": "Character Length",
+  "include_uppercase_letters": "Include Uppercase Letters",
+  "include_lowercase_letters": "Include Lowercase Letters",
+  "include_numbers": "Include Numbers",
+  "include_symbols": "Include Symbols", 
+  "strength": "Strength",
+  "generate": "Generate",
+  "copy": "Copy",
+  "copied": "Copied",
+  "copy_to_clipboard": "Copy to Clipboard",
+  "passwordStrength": {
+    "weak": "Weak",
+    "medium": "Medium",
+    "strong": "Strong",
+    "veryStrong": "Powerful"
+  }
+}
