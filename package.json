@@ -10,8 +10,7 @@
     "preview": "vite preview",
     "test": "vitest",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "postdeploy": "npm run preview"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "i18next": "^25.0.2",
