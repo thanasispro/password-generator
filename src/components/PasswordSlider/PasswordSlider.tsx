@@ -79,7 +79,7 @@ const PasswordSlider: React.FC<PasswordSliderProps> = ({
   }, []);
 
   return (
-    <div className="flex flex-col gap-[14px] md:gap-6 mb-2">
+    <div className="flex flex-col gap-[14px] md:gap-8 mb-2">
       <div className="flex justify-between items-center">
         <label
           htmlFor="passwordLength"

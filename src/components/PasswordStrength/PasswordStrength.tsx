@@ -45,7 +45,9 @@ const PasswordStrength: React.FC<PasswordStrengthProps> = ({ options, label, pas
               <div 
                 key={index}
                 className={`h-[28px] w-[10px] ${
-                  index <= strengthLevel ? strengthColors[strengthLevel] : 'bg-grey-200'
+                  index <= strengthLevel 
+                    ? strengthColors[strengthLevel] 
+                    : 'border-2 border-grey-200 bg-transparent'
                 }`}
               ></div>
             ))}
