@@ -23,32 +23,64 @@ export const usePasswordGenerator = (initialLength: number = 0) => {
     return Object.values(opts).filter(Boolean).length;
   };
 
-  const handleOptionChange = (optionName: keyof PasswordOptions) => (value: boolean) => {
-    setOptions((prevOptions) => {
-      const newOptions = {
-        ...prevOptions,
-        [optionName]: value,
-      };
+  const handlePasswordLengthChange = (newLength: number) => {
+    setPasswordLength(newLength);
 
-      // Adjust length if new options require more characters
-      const minLength = getMinimumLength(newOptions);
-      if (passwordLength < minLength) {
-        setPasswordLength(minLength);
-      }
-      
-      return newOptions;
-    });
+    if (!newLength) {
+      setOptions({
+        uppercase: false,
+        lowercase: false,
+        numbers: false,
+        symbols: false,
+      });
+    }
+
+    // Reset password when length changes
+    setPassword(undefined);
   };
-  
+
+  const handleOptionChange =
+    (optionName: keyof PasswordOptions) => (value: boolean) => {
+      setOptions((prevOptions) => {
+        // Only reset the password if the option value is actually changing
+        if (prevOptions[optionName] !== value) {
+          setPassword(undefined);
+        }
+
+        return {
+          ...prevOptions,
+          [optionName]: value,
+        };
+      });
+    };
+
   const generatePassword = () => {
-    const minLength = getMinimumLength(options);
-    const effectiveLength = Math.max(passwordLength, minLength);
+    // Early return if no options selected and no length specified
+    if (!options.uppercase && !options.lowercase && 
+        !options.numbers && !options.symbols && 
+        !passwordLength) {
+      return undefined;
+    }
     
+    // Create a copy of current options
+    let currentOptions = { ...options };
+    
+    // If no options are selected, default to uppercase
+    if (!currentOptions.uppercase && !currentOptions.lowercase && 
+        !currentOptions.numbers && !currentOptions.symbols) {
+      currentOptions.uppercase = true;
+      // Update the state for UI consistency
+      setOptions(currentOptions);
+    }
+
+    const minLength = getMinimumLength(currentOptions);
+    const effectiveLength = Math.max(passwordLength, minLength);
+
     if (effectiveLength !== passwordLength) {
       setPasswordLength(effectiveLength);
     }
-    
-    const generatedPassword = generatePasswordUtil(options, effectiveLength);
+
+    const generatedPassword = generatePasswordUtil(currentOptions, effectiveLength);
     setPassword(generatedPassword);
     return generatedPassword;
   };
@@ -57,8 +89,8 @@ export const usePasswordGenerator = (initialLength: number = 0) => {
     password,
     passwordLength,
     options,
-    setPasswordLength,
     handleOptionChange,
     generatePassword,
+    handlePasswordLengthChange
   };
 };

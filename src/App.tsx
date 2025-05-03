@@ -15,7 +15,7 @@ function App() {
     password,
     passwordLength,
     options,
-    setPasswordLength,
+    handlePasswordLengthChange,
     handleOptionChange,
     generatePassword,
   } = usePasswordGenerator();
@@ -48,7 +48,7 @@ function App() {
             <h2 id="length-control" className="sr-only">{t("length_configuration")}</h2>
             <PasswordSlider
               value={passwordLength}
-              onChange={setPasswordLength}
+              onChange={handlePasswordLengthChange}
               label={t("character_length")}
             />
           </div>

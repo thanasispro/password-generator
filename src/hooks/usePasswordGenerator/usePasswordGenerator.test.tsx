@@ -33,7 +33,7 @@ describe("usePasswordGenerator", () => {
     const { result } = renderHook(() => usePasswordGenerator());
 
     act(() => {
-      result.current.setPasswordLength(16);
+      result.current.handlePasswordLengthChange(16);
     });
 
     expect(result.current.passwordLength).toBe(16);
@@ -62,7 +62,7 @@ describe("usePasswordGenerator", () => {
     (generatePasswordUtil as unknown as ReturnType<typeof vi.fn>).mockReturnValue("a".repeat(20));
 
     act(() => {
-      result.current.setPasswordLength(20);
+      result.current.handlePasswordLengthChange(20);
     });
     
     // Store the return value from generatePassword
